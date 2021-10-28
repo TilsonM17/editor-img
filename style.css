@@ -73,9 +73,8 @@ body{
 }
 
 @media screen and (max-width : 600px){
-    body{
-        background: blue;
-    }
+
+
     .img-container{
         text-align: center;
         margin-bottom: 40px;
