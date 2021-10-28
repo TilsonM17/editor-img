@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Meme Estudio</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="container-fluid">
+      <div class="file-upload-section" onclick="selecionarImagem()">
+            <input type="file" id="foto-file">
+            selecionar imagem
+        </div>
+
+        <div class="img-container">
+            <img id="foto-image" class="img img-fluid">
+        </div>
+
+   </div>
+
+    <div class="row">
+            <div class="col-md-offset-2">
+               <div class="buttons-section">
+                    <table class="buttons-table">
+                        <tr>
+                            <td> <button class=" btn operation-btn" onclick="FazerCinza()">Cinza</button> </td>
+                            <td> <button class="btn operation-btn" onclick="Luz()">Aumentar Luz</button> </td>
+                            <td> <button class="btn operation-btn" onclick="Escuro()">Escuro</button> </td>
+
+                        </tr>
+
+                        <tr>
+                            <td> <button class="btn operation-btn" onclick="v()">Verter</button> </td>
+                            <td> <button class="btn operation-btn" onclick="Filtro()">Filtro</button> </td>
+                            <td> <button class="btn operation-btn" onclick="t()">Transparnte</button> </td>
+
+                        </tr>
+
+                        <tr>
+                            <td colspan="3"> <button class="operation-btn btn download-btn" onclick="baixar()">Baixar</button> </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+    <script src="foto.js"></script>
+    <script>
+        var foto;
+
+        window.onload = function () {
+            foto = new Foto();
+
+        }
+
+        function selecionarImagem() {
+            document.getElementById("foto-file").click();
+            console.log('Foi');
+        }
+        function FazerCinza() {
+            foto.makeDark();
+        }
+        function Luz(){
+            foto.makeBright();
+        }
+        function Escuro(){
+        
+        }
+        function t(){
+            foto.makeTransparent()
+        }
+
+        function Filtro(){
+            foto.applyEmbossFilter()
+        }
+        function v(){
+            foto.flipVertically();
+        }
+
+        function baixar(){
+            foto.export();
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>
