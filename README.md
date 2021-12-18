@@ -1,2 +1,5 @@
 # editor-img
-Editor de foto usando o foto.js pra fazer a cena toda
+Editor de foto usando o foto.js uma lib para manipular imgs
+
+Click ![aqui](" https://tilsonm17.github.io/editor-img/")
+ para ver o resultado.
